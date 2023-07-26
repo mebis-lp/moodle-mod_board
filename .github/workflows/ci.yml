@@ -12,11 +12,8 @@ jobs:
             moodle-branch: 'MOODLE_400_STABLE'
             database: 'mariadb'
           - php: '8.0'
-            moodle-branch: 'MOODLE_400_STABLE'
-            database: 'pgsql'
-          - php: '8.1'
             moodle-branch: 'MOODLE_401_STABLE'
-            database: 'mariadb'
+            database: 'pgsql'
           - php: '8.1'
             moodle-branch: 'MOODLE_402_STABLE'
             database: 'pgsql'
@@ -36,7 +33,7 @@ jobs:
           - 5432:5432
 
       mariadb:
-        image: mariadb:10.5
+        image: mariadb:10
         env:
           MYSQL_USER: 'root'
           MYSQL_ALLOW_EMPTY_PASSWORD: "true"
